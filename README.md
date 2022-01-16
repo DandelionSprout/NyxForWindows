@@ -6,7 +6,7 @@ This is done by simply removing the scripts' dependency on the `get_uid` and `un
 
 ### Prerequisites
 
-* Python 3 downloaded from https://www.python.org/downloads/ (I've tested with Python 3.9. Using the Microsoft Store versions has not yet been tested, since folder filepaths used by Microsoft Store apps tend to change **often**.)
+* Python 3 downloaded from https://www.python.org/downloads/ (I've tested with Python 3.9. Using the Microsoft Store versions has not yet been tested, since folder filepaths used by Microsoft Store apps tend to change *often*.)
 * An up-to-date version of `pip` or `pip3` within Python 3
 * (Optional but recommended) [Voidtools Everything](https://www.voidtools.com/)
 
