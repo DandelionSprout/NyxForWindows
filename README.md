@@ -12,7 +12,7 @@ This is done by simply removing the scripts' dependency on the `get_uid` and `un
 
 ### My procedure in-so-far as I can remember it
 
-1) In accordance with https://nyx.torproject.org/#download, open PowerShell and run `sudo pip install nyx`
+1) In accordance with https://nyx.torproject.org/#download, open PowerShell and run `pip install nyx`
 2) Once it has been installed, run `nyx`
 3) If you encounter the error `ImportError: No module named '_curses'`: Install *windows-curses* with `pip install windows-curses`. (Credit: [Bruno Ranieri](https://stackoverflow.com/questions/35850362/importerror-no-module-named-curses-when-trying-to-import-blessings))
 4) If you encounter an error about not being able to find `control_auth_cookie`: My understanding is that this can occur if Tor has been placed in `C:\Program Files`, since Tor on Windows lacks admin rights and will save new files to `%LOCALAPPDATA%\Local\VirtualStore` instead. This can be fixed by pointing to the file's actual location in `torrc` with `CookieAuthFile ______________\Data\control_auth_cookie`
