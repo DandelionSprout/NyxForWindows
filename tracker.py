@@ -1,4 +1,4 @@
-# Copyright 2013-2019, Damian Johnson and The Tor Project
+# Copyright 2013-2019, Damian Johnson and The Tor Project; 2022, Imre Kristoffer Eilertsen
 # See LICENSE for licensing information
 
 """
