@@ -2,7 +2,7 @@
 
 The three main files in this repo, [starter.py](https://raw.githubusercontent.com/DandelionSprout/NyxForWindows/main/starter.py), [header.py](https://raw.githubusercontent.com/DandelionSprout/NyxForWindows/main/header.py), and [tracker.py](https://raw.githubusercontent.com/DandelionSprout/NyxForWindows/main/tracker.py), can be used to patch and get the `pip` version of Nyx 2.1.0 (A monitor tool for Tor) to run natively on Windows 11, Windows 10, or Windows 8.
 
-This is done by simply removing the scripts' dependency on the `get_uid` attribute, and replacing instances of `os.uname` with `platform.name`, in order to run to completion. Not exactly a strategy that expert coders would've used (which I'm probably not), but it works in this case.
+This is done by simply removing the scripts' dependency on the `get_uid` attribute, and replacing instances of `os.uname` with `platform.uname` (Credit: [lunaken](https://github.com/lunaken)), in order to run to completion. Not exactly a strategy that expert coders would've used (which I'm probably not), but it works in this case.
 
 ### Prerequisites
 
