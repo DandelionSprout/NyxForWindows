@@ -168,7 +168,7 @@ def _setup_debug_logging(args):
     stem_version = stem.__version__,
     python_version = '.'.join(map(str, sys.version_info[:3])),
     system = platform.system(),
-    platform = ' '.join(platform.dist()),
+    platform = ' '.join(platform.system()),
     nyxrc_path = args.config,
     nyxrc_content = nyxrc_content,
   ))
@@ -180,7 +180,7 @@ def _warn_if_root(controller):
   """
 
   if controller.get_user(None) == 'root':
-    stem.util.log.notice("Tor is currently running with root permissions. This isn't a good idea, nor should it be necessary. See the 'User UID' option on Tor's man page for an easy method of reducing its permissions after startup.")
+    stem.util.log.notice("Tor is currently running with admin permissions. This isn't a good idea, nor should it be necessary. See the 'User UID' option on Tor's man(ual) page for an easy method of reducing its permissions after startup.")
 
 
 def _warn_if_unable_to_get_pid(controller):
