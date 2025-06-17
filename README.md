@@ -23,6 +23,7 @@ This is done by simply removing the scripts' dependency on the `get_uid` attribu
 
 The setup was initially designed with Python 3.9 in mind. While it does work on later Python versions, some non-critical compatibility bugs are present with Python 3.13.
 
+* 17 June 2025: When launching Nyx in PowerShell 7 in Windows Terminal (as of Terminal's v1.22.11141.0), the colors can look a bit warped. This is worked around by dragging the window in/out slightly each time after launch. The standalone PowerShell 7.5.x program is unaffected.
 * 15 June 2025: When using Python 3.13, Nyx is prone to often hang during startup for a multitude of reasons, mostly the first few times Nyx is launched (or is launched after a Tor update). Using `nyx --debug [Filepath without these brackets]` is recommended when expecting such hangs.
 * * Nyx can hang for more than 25 minutes while "PROTOCOLINFO 1" and later "AUTHCHALLENGE SAFECOOKIE" are processed. If only those 2 are processed, then it will however correctly start Nyx. Whether this is specific to Python 3.13 or not is unclear.
 * * Nyx can softlock if after initially hung for minutes when processing "PROTOCOLINFO 1" and "AUTHCHALLENGE SAFECOOKIE", it then attempts to process "AUTHENTICATE", and does not seem to progress past there.
@@ -31,3 +32,9 @@ The setup was initially designed with Python 3.9 in mind. While it does work on 
 ### Fixed
 
 * 15 June 2025: `nyx --debug [Filepath without these brackets]` would fail in Python 3.13 due to `platform.dist` in starter.py not being supported in Python 3.13. This was changed to `platform.system` in a repo update later that day.
+
+## Other details
+
+Screenshot of the program in use (with censored parts marked in orange):
+
+![Nyx for Windows in use](https://github.com/user-attachments/assets/147b0613-d543-4186-9425-c39a098b28a8)
