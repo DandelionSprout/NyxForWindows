@@ -1,4 +1,4 @@
-# Copyright 2010-2019, Damian Johnson and The Tor Project
+# Copyright 2010-2025, Damian Johnson, The Tor Project, Imre Eilertsen
 # See LICENSE for licensing information
 
 """
@@ -78,7 +78,7 @@ class KeyHandler(collections.namedtuple('Help', ['key', 'description', 'current'
       is_match = self._key_func(key) if self._key_func else key.match(self.key)
 
       if is_match:
-        if inspect.signature(self._action).args == ['key']:
+        if inspect.getfullargspec(self._action).args == ['key']:
           self._action(key)
         else:
           self._action()
