@@ -12,7 +12,7 @@ This is done by simply removing the scripts' dependency on the `get_uid` attribu
 
 ### My procedure in-so-far as I can remember it
 
-1) In accordance with https://nyx.torproject.org/#download: Open PowerShell and run `pip install nyx windows-curses` (Credit for recommending `windows-curses`: [Bruno Ranieri](https://stackoverflow.com/questions/35850362/importerror-no-module-named-curses-when-trying-to-import-blessings))
+1) In accordance with https://nyx.torproject.org/#download: Open PowerShell and run `pip3 install nyx windows-curses>=1.0` (Credit for recommending `windows-curses`: [Bruno Ranieri](https://stackoverflow.com/questions/35850362/importerror-no-module-named-curses-when-trying-to-import-blessings))
 2) Once it has been installed, run `nyx`
 3) **If** you encounter an error about not being able to find `control_auth_cookie`: My understanding is that this can occur if Tor has been placed in `C:\Program Files`, since Tor on Windows lacks admin rights and will save new files to `%LOCALAPPDATA%\VirtualStore` instead. This can be fixed by pointing to the file's actual location in `torrc` with `CookieAuthFile ______________\Data\control_auth_cookie`
 4) **If** you receive an error about `get_uid`: Right-click on [header.py](https://raw.githubusercontent.com/DandelionSprout/NyxForWindows/main/header.py), choose `Save As...`, and overwrite the default `header.py` file. In my case with Python 3.9, it was in `%LOCALAPPDATA%\Programs\Python\Python39\Lib\site-packages\nyx\panel\header.py`
